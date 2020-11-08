@@ -3,9 +3,9 @@ import authConfig from '@config/auth';
 import { injectable, inject } from 'tsyringe';
 import AppError from '@shared/errors/AppError';
 
-import IHasProvider from '../providers/HashProvider/models/IHasProvider';
+import IHasProvider from '../providers/HashProvider/models/IHashProvider';
 
-import IUsersRepository from '../repositories/IUserRepository';
+import IUsersRepository from '../repositories/IUsersRepository';
 
 import User from '../infra/typeorm/entities/User';
 

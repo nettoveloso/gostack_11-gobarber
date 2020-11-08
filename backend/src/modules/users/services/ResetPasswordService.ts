@@ -1,9 +1,9 @@
 import { injectable, inject } from 'tsyringe';
 import { isAfter, addHours } from 'date-fns';
 import AppError from '@shared/errors/AppError';
-import IUsersRepository from '../repositories/IUserRepository';
+import IUsersRepository from '../repositories/IUsersRepository';
 import IUserTokensRepository from '../repositories/IUserTokensRepository';
-import IHasProvider from '../providers/HashProvider/models/IHasProvider';
+import IHasProvider from '../providers/HashProvider/models/IHashProvider';
 // import User from '../infra/typeorm/entities/User';
 
 interface IRequest {

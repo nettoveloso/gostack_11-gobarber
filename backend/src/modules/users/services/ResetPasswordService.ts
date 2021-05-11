@@ -3,7 +3,7 @@ import { isAfter, addHours } from 'date-fns';
 import AppError from '@shared/errors/AppError';
 import IUsersRepository from '../repositories/IUsersRepository';
 import IUserTokensRepository from '../repositories/IUserTokensRepository';
-import IHasProvider from '../providers/HashProvider/models/IHashProvider';
+import IHashProvider from '../providers/HashProvider/models/IHashProvider';
 // import User from '../infra/typeorm/entities/User';
 
 interface IRequest {
@@ -20,8 +20,8 @@ class ResetPasswordService {
     @inject('UserTokensRepository')
     private userTokensRepository: IUserTokensRepository,
 
-    @inject('HasProvider')
-    private hasProvider: IHasProvider,
+    @inject('HashProvider')
+    private hashProvider: IHashProvider,
   ) {}
 
   public async execute({ token, password }: IRequest): Promise<void> {
@@ -43,7 +43,7 @@ class ResetPasswordService {
       throw new AppError('Token expired');
     }
 
-    user.password = await this.hasProvider.generateHash(password);
+    user.password = await this.hashProvider.generateHash(password);
 
     await this.usersRepository.save(user);
   }

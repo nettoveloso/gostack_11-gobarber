@@ -3,7 +3,7 @@ import authConfig from '@config/auth';
 import { injectable, inject } from 'tsyringe';
 import AppError from '@shared/errors/AppError';
 
-import IHasProvider from '../providers/HashProvider/models/IHashProvider';
+import IHashProvider from '../providers/HashProvider/models/IHashProvider';
 
 import IUsersRepository from '../repositories/IUsersRepository';
 
@@ -24,8 +24,8 @@ class AuthenticateUserService {
   constructor(
     @inject('UsersRepository')
     private userRepository: IUsersRepository,
-    @inject('HasProvider')
-    private hashProvider: IHasProvider,
+    @inject('HashProvider')
+    private hashProvider: IHashProvider,
   ) {}
 
   public async execute({ email, password }: IRequest): Promise<IResponse> {

@@ -17,7 +17,7 @@ type IResponse = Array<{
 @injectable()
 class ListProviderMonthAvailabilityService {
   constructor(
-    @inject('AppointmentsRepository')
+    @inject('AppointmentsRespository')
     private appointmentsRepository: IAppointmentsRepository,
   ) {}
 

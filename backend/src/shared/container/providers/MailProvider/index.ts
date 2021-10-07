@@ -10,7 +10,7 @@ import MailtrapMailProvider from './implementations/MailtrapMailProvider';
 
 container.registerInstance<IMailProvider>(
   'MailProvider',
-  mailConfig.driver === 'etherel'
+  mailConfig.driver === 'ethereal'
     ? container.resolve(EtherealMailProvider)
     : container.resolve(MailtrapMailProvider),
 );

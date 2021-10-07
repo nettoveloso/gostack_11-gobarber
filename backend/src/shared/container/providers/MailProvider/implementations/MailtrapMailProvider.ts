@@ -14,11 +14,11 @@ export default class MailtrapMailProvider implements IMailProvider {
     private mailTemplateProvider: IMailTemplateProvider,
   ) {
     this.client = nodemailer.createTransport({
-      host: 'smtp.mailtrap.io',
-      port: 2525,
+      host: process.env.HOST,
+      port: Number(process.env.MAIL_PORT),
       auth: {
-        user: '16241b78e1c83e',
-        pass: '55202c8db1c696',
+        user: process.env.MAIL_USER,
+        pass: process.env.MAIL_PASSWORD,
       },
     });
   }

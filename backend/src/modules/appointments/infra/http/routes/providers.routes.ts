@@ -9,8 +9,10 @@ import ProviderMonthAvailabilityController from '../controllers/ProviderMonthAva
 const providerRouter = Router();
 
 const appointmentsController = new ProvidersController();
-const providerDayAvailabilityController = new ProviderDayAvailabilityController();
-const providerMonthAvailabilityController = new ProviderMonthAvailabilityController();
+const providerDayAvailabilityController =
+  new ProviderDayAvailabilityController();
+const providerMonthAvailabilityController =
+  new ProviderMonthAvailabilityController();
 
 providerRouter.use(ensureAuthenticated);
 

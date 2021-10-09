@@ -5,7 +5,6 @@ import ArrowLeftIcon from '../../assets/ArrowLeftIcon.svg';
 import ArrowRightIcon from '../../assets/ArrowRightIcon.svg';
 
 
-
 export const Container = styled.div``;
 
 export const Header = styled.header`
@@ -57,8 +56,13 @@ export const Profile = styled.div`
       color: #f4ede8;
     }
 
-    strong{
+    a{
+      text-decoration: none;
       color: #ff9000;
+
+      &:hover{
+        opacity: 0.8;
+      }
     }
   }
 `;
@@ -171,7 +175,6 @@ export const Section = styled.section`
     color: #999591;
   }
 `;
-
 
 export const Appointment = styled.div`
   display: flex;

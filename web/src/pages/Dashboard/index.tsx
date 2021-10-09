@@ -213,7 +213,12 @@ const Dashboard: React.FC = () => {
                       src={appointment.user.avatar_url}
                       alt={appointment.user.name}
                     />
+
+                    <strong>{appointment.user.name}</strong>
                   </div>
+
+
+
                 </Appointment>
               ))
             }
@@ -239,6 +244,7 @@ const Dashboard: React.FC = () => {
                       src={appointment.user.avatar_url}
                       alt={appointment.user.name}
                     />
+                    <strong>{appointment.user.name}</strong>
                   </div>
                 </Appointment>
               ))

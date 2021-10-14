@@ -7,6 +7,10 @@ import AppProvider from './hooks';
 
 import Routes from './routes';
 
+import Icon from 'react-native-vector-icons/Feather';
+
+Icon.loadFont();
+
 const App: React.FC = () => (
   <>
     <NavigationContainer>
